@@ -19,6 +19,27 @@ Rules:
 - **Write it in one sentence** at the top of DESIGN.md (Cite: "every live fact is a painted counter
   sign"). Every later choice is checked against it.
 
+### The world also picks the base (accent, text face, light or dark)
+
+The signature layer is not the only thing the world decides. Before choosing any token, walk the
+world and write down three things, each with the object it came from:
+
+| Decide | Take it from | Examples |
+| --- | --- | --- |
+| **Light or dark** | when and where the subject is used | a bus stop at dusk → dark; a garden bench in daylight → light; a lifting platform under hall lights → dark concrete |
+| **The base ramp's temperature** | the dominant surface in that place | galvanised steel (cool grey), rubber gym floor (warm charcoal), kraft paper (warm), night sky (blue-black) |
+| **The accent** | the one small thing in the world that *points* | a bus's amber "stopping" light, a watering can's paint, a bar collar, a library date stamp's ink |
+| **The text face** | the printed matter of that world | transit signage (a DIN-like grotesk), a seed catalogue (a humanist sans), a gym's plate stamping (a condensed sans) |
+
+**Defaults are a smell, not a choice.** If you reach for the accent, face or base before naming the
+object it came from, it is the house default leaking in. Models converge on: a light cool grey base,
+a cobalt blue accent (`#24xxC9`), Figtree or Inter, and red as the banned colour. Any one can be
+right *if the world gives it to you*; picking it because it is safe is the same mistake as the cream
+editorial default, one layer down.
+
+**Check:** put your accent, face and base next to the last app you designed. If they match and the
+worlds don't, change the base.
+
 ## 2. The quiet base
 
 The base should be nearly invisible, so the signature has room.
@@ -29,8 +50,8 @@ The base should be nearly invisible, so the signature has room.
 - **Sheets take the page colour,** so cards on them still stand out.
 - **Text in 3 tiers** (primary, body, muted), each checked against the surfaces it sits on, with the
   contrast ratio written in a comment.
-- **Type: a calm text face for reading,** near-system but not the default (Plus Jakarta Sans, a
-  custom sans; not Inter, Roboto or the platform face). Load it
+- **Type: a calm text face for reading,** chosen from the world's printed matter (§ 1), not
+  Inter, Roboto or the platform face, and not whichever sans you used last time. Load it
   as a custom font so it measures the same on iOS and Android. Give the scale 8–12 steps and stick
   to them: off-scale sizes are the first thing to drift.
 - **Letter spacing:** negative on large text, positive on small uppercase.
@@ -54,6 +75,10 @@ The base should be nearly invisible, so the signature has room.
 - **One primary filled action per view.** Everything else is quieter:
   - Tabi: lowercase mono text actions with an accent `›`;
   - Cite: a neutral secondary button and a square `…` button.
+- **A secondary action beside the primary button is a real button, outlined:** same height and
+  radius, transparent fill, a 1.5-pt edge in the primary text colour ("not now", "skip set",
+  "cancel"). Bare text next to a filled button reads as a label, not a tap target. Bare text with a
+  `›` is fine for links that sit *elsewhere* (in a list, under a section), never in the button row.
 - **Split the accent by job** when contrast demands it: Cite uses bright green for text and icons
   and deep enamel green for fills, with white text on the fill. Text on an accent fill is whatever
   passes contrast (Tabi uses dark ink on terracotta).
@@ -65,7 +90,10 @@ The base should be nearly invisible, so the signature has room.
   so a reading app bans red and shows a missed day as a blank row, not a fine.
 - **Which selected states get the accent:** the one choice that drives the view's primary action
   (the picked book, the picked plan) gets an accent edge or fill. Secondary pickers in the same view
-  (a duration chip, a filter) use a fill step. If everything picked is orange, nothing is.
+  (a duration chip, a filter, a "when?" segment) get a fill step **plus a 1.5-pt edge in the primary
+  text colour**, drawn on the transparent border every option already reserves. A fill step alone is
+  too quiet to read as picked, and the accent would compete with the primary choice. If everything
+  picked is orange, nothing is.
 - **A signature object may carry the accent only when it *is* the next step** (today's empty row on
   the slip: "today ›"). Otherwise it keeps its own paints.
 - **Budget it:** count accent call sites, and cap or ratchet them with a test (guard-tests.md).
@@ -127,7 +155,8 @@ The base should be nearly invisible, so the signature has room.
   name."
 - **Labels can be questions:** "Where did you stop?", "Is this still accurate?"
 - **Buttons are verb-first and name the act:** "Post a quest", "Call it off". Secondary actions can
-  be lowercase text ("not now", "skip").
+  be lowercase ("not now", "skip"), drawn as outlined buttons when they share a row with the
+  primary (§ 3).
 - **Empty states:** a scene or icon, a title, one sentence that teaches how it fills, and the next
   step ("find a quest on the map ›"). Never a lone grey line.
 - **Errors:** "Couldn't load {what}" plus what to do ("Check your connection and try again.").

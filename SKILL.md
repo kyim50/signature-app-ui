@@ -32,30 +32,35 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 2. **Find the world.** What physical or cultural thing does this app's subject live in? Name one
    (local signage, a game cartridge, a field notebook, a transit ticket). Write it in one sentence.
    Its materials become the signature layer. method.md § 1.
-3. **Build the quiet base:** a neutral ramp separated by fill (no outlines), a near-system text
-   face, a 4-pt spacing scale, one radius family, flat sections. method.md § 2.
-4. **Ration the accent.** It means "selected / next step / waiting on you", nothing else. One
+3. **Let the world pick the base too:** light or dark, the ramp's temperature, the accent and the
+   text face, each named with the object in the world it came from. method.md § 1, "The world also
+   picks the base".
+4. **Build the quiet base** from those choices: a neutral ramp separated by fill (no outlines), the
+   text face, a 4-pt spacing scale, one radius family, flat sections. method.md § 2.
+5. **Ration the accent.** It means "selected / next step / waiting on you", nothing else. One
    primary action per view; everything else is quieter. Name a banned colour. method.md § 3.
-5. **Quarantine the loud parts.** The signature face, paints and ornaments appear only on the
+6. **Quarantine the loud parts.** The signature face, paints and ornaments appear only on the
    signature layer, and the layer keeps fixed paints that ignore the theme. method.md § 4.
-6. **Replace system chrome** with your own popup, toast, sheet and skeleton, in your type. No
+7. **Replace system chrome** with your own popup, toast, sheet and skeleton, in your type. No
    system alerts, no emoji, no generic spinners. method.md § 5.
-7. **Calm motion:** chrome never bounces. Ambient motion only where it means something. method.md § 6.
-8. **Plain, concrete copy** that explains why, with empty states that teach and offer the next step.
+8. **Calm motion:** chrome never bounces. Ambient motion only where it means something. method.md § 6.
+9. **Plain, concrete copy** that explains why, with empty states that teach and offer the next step.
    method.md § 7.
-9. **Write the rules down with their reasons,** and turn the critical ones into guard tests
+10. **Write the rules down with their reasons,** and turn the critical ones into guard tests
    (guard-tests.md).
-10. **Verify on a phone-sized render:** screens in context, light and dark if both ship, at a
+11. **Verify on a phone-sized render:** screens in context, light and dark if both ship, at a
     320-pt width, then the review checklist (review.md).
 
 ## Common mistakes
 
 | Mistake | Fix |
 | --- | --- |
-| The generic "tasteful" default: a cream-paper *page*, serif display, red accent, soft shadows | Find the app's own world first (step 2). Paper is fine as an *object* the world really has (a slip, a ticket), never as the page chrome |
-| Inter / Roboto / the platform default as the text face | A calm face with a little character, loaded as a custom font (Plus Jakarta Sans, a custom sans) |
+| The generic "tasteful" default: a cream-paper *page*, serif display, red accent, soft shadows | Find the app's own world first (steps 2–3). Paper is fine as an *object* the world really has (a slip, a ticket), never as the page chrome |
+| Inter / Roboto / the platform default as the text face | A calm face taken from the world's printed matter (step 3), loaded as a custom font |
+| The *base* defaults while the world is specific: light cool grey, cobalt accent, Figtree/Inter, red banned, every app | Name the object in the world each of the base, accent and face came from (step 3). No object, no choice |
 | Every panel a soft floating card with a shadow | Flat sections on the page; cards by a fill step only; shadows only on things that float (popups, toasts, paper objects) |
-| Faint 1-px outlines on chips, cards, buttons, segmented controls | A soft fill; keep an edge only for a *picked* state; invisible borders so states never shift layout |
+| Faint 1-px outlines on chips, cards, buttons, segmented controls | A soft fill; a picked chip or filter gets an edge (accent for the primary choice, text colour for the rest) on an invisible border that's always there, so states never shift layout |
+| Bare text "not now" beside a filled primary button; a picked filter shown by a faint fill alone | Outline them in the text colour: the secondary is an outlined button of the same height; the picked chip gets a 1.5-pt edge |
 | Accent on headings, icons, badges, tints everywhere | Accent = pointer. Count its uses; one primary button per view; focus ring in the text colour |
 | Tinted wash pills for status | Status in the signature layer's own object (a painted plate, a stamp, a bracketed tag) |
 | Display or brand font used for headings everywhere | Quarantine it to the signature layer, by test |

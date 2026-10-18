@@ -16,10 +16,12 @@ finding with a file:line and a fix.
 - [ ] Sheets use the page colour; cards on them still read.
 - [ ] Every size, colour, radius and space comes from tokens (grep for literals).
 - [ ] Sections are separated by space, with a label and a purpose line; no card per section.
-- [ ] Focus and picked states don't shift layout (transparent borders reserved).
+- [ ] Picked chips and filters show an edge, not just a fill (accent on the primary choice, text
+  colour on the rest), and don't shift layout (transparent borders reserved).
 
 ## Accent and loud parts
-- [ ] The accent appears only as a pointer; one primary filled action in view.
+- [ ] The accent appears only as a pointer; one primary filled action in view; a secondary action
+  in the same row is an outlined button, not bare text.
 - [ ] The banned colour is absent.
 - [ ] The signature face and paints appear only on signature objects.
 - [ ] At most one big moment on the screen.
