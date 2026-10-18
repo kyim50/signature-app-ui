@@ -61,6 +61,7 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 | Every panel a soft floating card with a shadow | Flat sections on the page; cards by a fill step only; shadows only on things that float (popups, toasts, paper objects) |
 | Faint 1-px outlines on chips, cards, buttons, segmented controls | A soft fill; a picked chip or filter gets an edge (accent for the primary choice, text colour for the rest) on an invisible border that's always there, so states never shift layout |
 | Bare text "not now" beside a filled primary button; a picked filter shown by a faint fill alone | Outline them in the text colour: the secondary is an outlined button of the same height; the picked chip gets a 1.5-pt edge |
+| A bright neon accent (mint, cyan, lime) as the button fill on a dark page | Deep, muted fill (saturation < ~55%, lightness 25–45%) with light text; lighter desaturated tint only for small marks |
 | Accent on headings, icons, badges, tints everywhere | Accent = pointer. Count its uses; one primary button per view; focus ring in the text colour |
 | Tinted wash pills for status | Status in the signature layer's own object (a painted plate, a stamp, a bracketed tag) |
 | Display or brand font used for headings everywhere | Quarantine it to the signature layer, by test |

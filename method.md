@@ -82,6 +82,13 @@ The base should be nearly invisible, so the signature has room.
 - **Split the accent by job** when contrast demands it: Cite uses bright green for text and icons
   and deep enamel green for fills, with white text on the fill. Text on an accent fill is whatever
   passes contrast (Tabi uses dark ink on terracotta).
+- **No neon fills.** A bright, light, saturated accent (mint, cyan, lime, electric yellow) as a
+  big button fill on a dark page reads as a gaming site, not a tool. Split the accent:
+  - **the fill** is deep and muted: HSL saturation under ~55%, lightness 25–45%, with light text on
+    it (e.g. walk-signal teal as a fill is `#1E6F5E`, not `#33D6B2`);
+  - **marks and edges** (the live dot, the tab underline, a picked edge) can be lighter, but still
+    desaturated (`#6DB8A5`, not `#33D6B2`).
+  Tabi's terracotta `#D97757` is the ceiling for brightness: warm, mid-light, never glowing.
 - **The focus ring uses the text colour,** which keeps the accent scarce.
 - **In dark mode the primary button may be white,** not the accent (Cite). Accent fills on a dark
   page quickly turn the whole app one colour.

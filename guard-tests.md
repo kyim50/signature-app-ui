@@ -52,6 +52,8 @@ it('no em dashes in user-facing strings', () => {
 **Also worth testing:**
 - **The banned colour.** A hue detector over the theme and every literal: for gold, hue 38–56°,
   saturation > 0.5, lightness > 0.45. Add a self-test that proves it catches the banned value.
+- **No neon accent fill.** Convert the accent fill token to HSL and assert saturation < 0.55 and
+  lightness between 0.25 and 0.45 (dark themes). Self-test it against `#33D6B2`, which must fail.
 - **Contrast.** Each text tier against each surface it sits on meets 4.5:1 (or 3:1 for large text).
   Compute it in the test from the tokens.
 - **Sheet motion.** The shared sheet uses the drawer curve or a critically damped spring

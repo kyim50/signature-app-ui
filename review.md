@@ -22,6 +22,7 @@ finding with a file:line and a fix.
 ## Accent and loud parts
 - [ ] The accent appears only as a pointer; one primary filled action in view; a secondary action
   in the same row is an outlined button, not bare text.
+- [ ] No neon: the accent fill is deep and muted (saturation < ~55%, lightness 25–45%) with light text.
 - [ ] The banned colour is absent.
 - [ ] The signature face and paints appear only on signature objects.
 - [ ] At most one big moment on the screen.
