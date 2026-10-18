@@ -7,11 +7,17 @@ let them choose from previews. This applies whenever a person is in the loop. If
 subagent with no one to ask, or they have said "just go", pick the strongest direction yourself
 and say which one you picked and why.
 
-**Ask (one short round, multiple choice where you can):**
-- What the app is for and who opens it, if the brief doesn't say.
-- How it should feel, in a few words, or a reference app or thing they love.
-- Hard constraints: light, dark or both; existing brand colours or fonts; platform.
-- What must stay, if restyling.
+**Ask only what you can't already tell.** There is no fixed questionnaire. Read the brief, the
+repo, the existing theme and anything they've said before, then ask about the gaps that would
+change the design, in one short round, multiple choice where you can. Often that's one or two
+questions; sometimes none, and you go straight to directions. Typical gaps, depending on context:
+- a new app with a thin brief: what it's for, who opens it and when;
+- no sense of taste yet: a few feel words, or an app or object they love;
+- a restyle: what must stay, and what they dislike about it now;
+- one screen in an existing app: usually nothing; the app's rules decide, so confirm the job of
+  the screen and preview;
+- brand or platform facts you can't find in the code: light or dark, fixed colours or fonts.
+Never ask what the code, the brief or an earlier answer already says.
 
 **Then offer 2–3 directions.** Each one is a different world, not three shades of one:
 - the world in one sentence;

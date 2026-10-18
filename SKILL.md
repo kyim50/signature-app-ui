@@ -29,8 +29,8 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 
 1. **Read what exists.** Look for a DESIGN.md, a theme file and decision logs, and extend them. An
    app's own rules beat this skill's defaults.
-   **Then ask for direction and preview before building:** one short round of questions (purpose,
-   feel, constraints), then 2–3 distinct directions, each with a quick hero preview. Build only
+   **Then ask for direction and preview before building:** ask only about the gaps the brief and
+   code don't answer (it varies; sometimes nothing), then 2–3 distinct directions, each with a quick hero preview. Build only
    after the person picks; show the first screen before the rest. No one to ask? Pick the
    strongest and say why. method.md § 0.
 2. **Find the world.** What physical or cultural thing does this app's subject live in? Name one
