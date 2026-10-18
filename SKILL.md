@@ -29,6 +29,10 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 
 1. **Read what exists.** Look for a DESIGN.md, a theme file and decision logs, and extend them. An
    app's own rules beat this skill's defaults.
+   **Then ask for direction and preview before building:** one short round of questions (purpose,
+   feel, constraints), then 2–3 distinct directions, each with a quick hero preview. Build only
+   after the person picks; show the first screen before the rest. No one to ask? Pick the
+   strongest and say why. method.md § 0.
 2. **Find the world.** What physical or cultural thing does this app's subject live in? Name one
    (local signage, a game cartridge, a field notebook, a transit ticket). Write it in one sentence.
    It supplies the signature layer, which can be a hero card with illustration, a type grammar, a
@@ -74,6 +78,7 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 | `Alert.alert`, emoji, spinners | Your own popup, pixel or custom icons, shaped skeletons |
 | A blank list or a lone grey "No items" line | A scene or icon, a title, one sentence that teaches, a next-step action |
 | Hype copy, "Oops!", exclamation marks, jargon | Plain sentences that say what happens and why; a question as the title; buttons that name the act |
+| Building five screens straight from the brief, then asking for feedback | Ask a few questions, preview 2–3 directions, build after the pick, show one screen first |
 | Taste lives only in your head | Token comments with the measured reason; guard tests in CI |
 
 ## Files

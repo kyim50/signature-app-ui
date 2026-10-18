@@ -1,5 +1,33 @@
 # The method in depth
 
+## 0. Ask for direction, then preview before building
+
+Taste is the person's, not yours. Before building screens, find out where they want to go and
+let them choose from previews. This applies whenever a person is in the loop. If you are a
+subagent with no one to ask, or they have said "just go", pick the strongest direction yourself
+and say which one you picked and why.
+
+**Ask (one short round, multiple choice where you can):**
+- What the app is for and who opens it, if the brief doesn't say.
+- How it should feel, in a few words, or a reference app or thing they love.
+- Hard constraints: light, dark or both; existing brand colours or fonts; platform.
+- What must stay, if restyling.
+
+**Then offer 2–3 directions.** Each one is a different world, not three shades of one:
+- the world in one sentence;
+- the signature form (hero card with illustration, type grammar, live display, object, data
+  shape, scene, motion);
+- light or dark, the accent, the text face, the banned colour, each with where it came from;
+- what the home hero and one sheet would show.
+
+**Show a preview for each, cheaply:** a small rendered mockup of just the home hero (one HTML file,
+three phone-width tiles side by side, rendered once), or, if rendering isn't available, an ASCII
+sketch of the hero and the token swatches. Use the question tool's preview field when the host has
+one. Mark your recommendation and say why in one line.
+
+**Build only after they pick** (or mix: "A's world with B's colours"). Then show the first full
+screen before doing the rest, so a wrong turn costs one screen, not five.
+
 ## 1. Find the world, choose the signature layer
 
 The signature comes from the subject's own world, not from a design trend. Ask: *where does this
