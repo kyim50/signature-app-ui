@@ -30,8 +30,8 @@ it('the accent stays rationed (ratchet: lower the cap as you clean up)', () => {
   expect(CAP - uses).toBeLessThan(10); // keeps the cap honest
 });
 
-it('the signature face only appears on signature objects', () => {
-  const allowed = ['components/sign', 'components/board']; // your signature components
+it('the display face only appears where the system allows it', () => {
+  const allowed = ['components/hero', 'components/header']; // your display-face components
   expect(grep('fonts\\.display').filter((l) => !allowed.some((a) => l.includes(a)))).toEqual([]);
 });
 

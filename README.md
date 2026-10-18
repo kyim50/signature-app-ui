@@ -1,8 +1,8 @@
 # signature-app-ui
 
-A Claude Code skill for designing app UI that looks distinctive rather than templated: a quiet,
-disciplined base plus one loud signature layer borrowed from the app's own world, with the rules
-written down and enforced by tests. Distilled from two shipped apps, Tabi and Cite (see casebook.md).
+A Claude Code skill for designing app UI with personality on a simple, consistent design system:
+it builds and audits the tokens and components, then lets each app find its own character, with the
+system rules written down and enforced by tests. Distilled from two shipped apps, Tabi and Cite (see casebook.md).
 
 Install for every project:
 

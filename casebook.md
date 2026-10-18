@@ -1,13 +1,14 @@
 # Casebook: two apps, one method
 
-These are worked examples. Each app's signature comes from its own world.
+These are worked examples. Both happen to use a world object as their character source, because
+their subjects really live in one (games, local signs). Most apps don't need one; see method.md § 1.
 
 - **Reuse freely (the method):** fill-separated surfaces, the transparent-border trick, accent as a
   pointer, one primary action, a label plus a purpose line, the drawer curve or a critically damped
   spring, 0.97 press, a 260 ms arrival, shaped and delayed skeletons, popup copy rules, guard tests.
 - **Never reuse (their signatures):** Tabi's brackets, `▶` menu, terracotta, mono-everything, pinned
   notes and stamps; Cite's painted boards, enamel green, Big Shoulders, the chasing outline. A new app
-  invents its own from its own world.
+  finds its own character.
 
 ## Tabi: real-world quests (Expo)
 

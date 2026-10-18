@@ -1,284 +1,241 @@
 # The method in depth
 
-## 0. Ask for direction, then preview before building
+The **direction** (§ 1) is decided once for the whole app and everything after it follows from
+it. The **system** (design-system.md) is required. Everything else here is a craft default: the
+direction decides whether this app uses it.
 
-Taste is the person's, not yours. Before building screens, find out where they want to go and
-let them choose from previews. This applies whenever a person is in the loop. If you are a
-subagent with no one to ask, or they have said "just go", pick the strongest direction yourself
-and say which one you picked and why.
+## 0. Read what exists
 
-**Ask only what you can't already tell.** There is no fixed questionnaire. Read the brief, the
-repo, the existing theme and anything they've said before, then ask about the gaps that would
-change the design, in one short round, multiple choice where you can. Often that's one or two
-questions; sometimes none, and you go straight to directions. Typical gaps, depending on context:
-- a new app with a thin brief: what it's for, who opens it and when;
-- no sense of taste yet: a few feel words, or an app or object they love;
-- a restyle: what must stay, and what they dislike about it now;
-- one screen in an existing app: usually nothing; the app's rules decide, so confirm the job of
-  the screen and preview;
-- brand or platform facts you can't find in the code: light or dark, fixed colours or fonts.
-Never ask what the code, the brief or an earlier answer already says.
+- **Extending an app** (a new screen, sheet, feature): inherit its direction and system. Resolve
+  only the new screen's job, content, states and how it joins the rest. No new identity, no new
+  tokens unless the system truly lacks one, and then add it to the system.
+- **Restyling or redesigning:** keep the product's content, function and anything the person
+  says must stay; treat the old look as evidence of what the app is, not as something to polish.
+- **New app, no visual history:** set a direction with the person (§ 1).
+- **An app with a look but no DESIGN.md:** document the look that's there before changing it.
 
-**Then offer 2–3 directions.** Each one is a different world, not three shades of one:
-- the world in one sentence;
-- the signature form (hero card with illustration, type grammar, live display, object, data
-  shape, scene, motion);
-- light or dark, the accent, the text face, the banned colour, each with where it came from;
-- what the home hero and one sheet would show.
+## 1. Set the direction for the whole app
 
-**Show a preview for each, cheaply:** a small rendered mockup of just the home hero (one HTML file,
-three phone-width tiles side by side, rendered once), or, if rendering isn't available, an ASCII
-sketch of the hero and the token swatches. Use the question tool's preview field when the host has
-one. Mark your recommendation and say why in one line.
+The direction is the app's personality, and it applies everywhere: the colours, the type, how
+dense the screens are, the art, how things move, how the copy talks, what empty states and
+errors feel like. Not just the header.
 
-**Build only after they pick** (or mix: "A's world with B's colours"). Then show the first full
-screen before doing the rest, so a wrong turn costs one screen, not five.
+### Ask only what you can't already tell
 
-## 1. Find the world, choose the signature layer
+Read the brief, the repo and anything the person has said, then ask about the gaps that would
+change the direction, in one short round, multiple choice where you can. Sometimes none.
+Typical gaps:
+- who opens it, when, and in what mood (a tired student at 11pm; a runner at 6am, half awake);
+- how it should feel, in a few words, or an app they love the feel of;
+- what it should never feel like;
+- hard limits: brand colours, fonts, platform, light or dark;
+- for a restyle: what must stay, and what they dislike now.
 
-The signature comes from the subject's own world, not from a design trend. Ask: *where does this
-app's subject physically or culturally live?* Pick the most specific answer that has visible
-materials.
+### The direction brief
 
-| App | World | Signature layer |
+Each direction, and the final chosen one, is written as a short brief. Put the chosen one at the
+top of DESIGN.md; every later decision is checked against it.
+
+| Field | What it says | Example (a flatmates app) |
 | --- | --- | --- |
-| Cite (a live local map) | hand-painted cook-shop and gate signs in Kingston | enamel boards and plates: block capitals, a cream pinstripe, a hard struck shadow |
-| Tabi (real-world quests) | old games and terminals, a quest board | `[BRACKETS]`, a blinking `▶` menu, `[ ✓ ]`, pixel badges, live night scenes, pinned paper notes and stamps |
+| **Scene** | who opens it, where, when, in what light and mood | four students, the kitchen, evenings, slightly tired, a bit sociable |
+| **Feel** | two or three words | warm, homely, a little cheeky |
+| **Character source** | where the personality comes from (below) | friendly drawn household scenes + a cosy colour story |
+| **Colour strategy** | restrained, committed, full palette or drenched (below), with the palette | full palette: moss, butter, coral, a colour per flatmate |
+| **Light or dark** | from the scene, never by habit | light: a lit kitchen |
+| **Type** | the faces and why they fit the feel | a rounded grotesk for headings, a friendly sans for text |
+| **Dials** | expression, density, motion, each 1–10 | expression 6, density 4, motion 5 |
+| **Voice** | how the copy talks, with two sample lines | "Morning, Kimani", "Bins are yours tonight" |
+| **Signature move** | the one thing people would remember | each flatmate's colour follows them through rota, bills and avatars |
+| **Never** | what it must not become | a banking app; a chore-nagging app |
 
-Rules:
-- **One world per app.** Two worlds read as a theme park.
-- **Local beats generic.** A specific place, era or craft is ownable. "Minimal" and "editorial" are not.
-- **The layer carries *meaning*, not decoration.** Cite paints only live facts (status, kind). Tabi
-  uses the game grammar for selection, actions and feedback. If an ornament marks nothing, drop it.
-- **Write it in one sentence** at the top of DESIGN.md (Cite: "every live fact is a painted counter
-  sign"). Every later choice is checked against it.
+**The dials** (from taste-style skills) set how far the whole app goes:
+- **Expression** 1–10: 1 is calm and conventional, 10 is bold, art-led, surprising.
+- **Density** 1–10: 1 is airy with one thing per screen, 10 is packed like a cockpit. A rota
+  app sits low; a finance tracker can sit higher. Set it from the task, not from taste.
+- **Motion** 1–10: 1 is near-static, 10 is lively and physical (see § 5).
 
-### The signature can take many forms (not always paper)
+**Character sources.** Any of these can carry an app; most use one or two:
 
-The world is a source of *ideas*, not a demand to draw a literal object. Pick the form that serves
-the screen best; often it's a strong composition, not a prop.
-
-| Form | Example |
+| Source | Example |
 | --- | --- |
-| **A hero card with an illustration** | tonight's dinner as a big dark card: a drawn plate bleeding off the corner, the dish in a serif, a meta row (35 min · serves 2 · all in pantry), the primary action inside it |
-| **A glyph or type grammar** | Tabi's `[BRACKETS]` and `▶` menu |
-| **A live display** | a bus's dot-matrix headsign |
-| **A painted or printed object** | Cite's enamel boards; a date-due slip |
-| **A data shape from the world** | the bar loaded with real plates; a soil-probe needle |
-| **Illustration or scene** | Tabi's night scenes melting into the page |
-| **Motion** | an ink dissolve between tabs; a live dot breathing in sync |
+| Illustration | friendly drawn scenes: bins out under a moon; a bowl bleeding off a card |
+| Colour story | moss and butter; terracotta on warm dark; a colour per person |
+| Voice | "What's for supper?", "Bins are yours tonight, Kimani" |
+| Type | a soft serif for titles; Tabi's `[BRACKETS]` grammar |
+| A world | Cite's painted shop signs; a dot-matrix bus sign |
+| Data drawn with care | the week as seven bars; an elevation curve |
+| Motion | an ink dissolve between tabs; a live dot breathing |
 
-**Don't make every world a paper artifact** (slip, tag, index card, tape, packet). Paper is one
-option among seven. If your last design used paper, try a different form first. The test is not
-"is it a real object?" but "would someone recognise this app from this screen, and does the layer
-mark something?" A polished hero card that a generic app wouldn't have passes.
+**Colour strategies.** Pick one before picking colours:
+- **Restrained:** tinted neutrals plus one accent. Calm tools, reading. The accent points at what's
+  selected or next.
+- **Committed:** one strong colour carries 30–60% of the screen (a coloured header, hero or
+  ground).
+- **Full palette:** 3–4 named colours with jobs (a colour per person, per category, per state).
+- **Drenched:** the screen is the colour.
 
-### The world also picks the base (accent, text face, light or dark)
+A grey screen with one accent is not restraint by default; it's the generic option. Choose it
+only when the feel asks for it.
 
-The signature layer is not the only thing the world decides. Before choosing any token, walk the
-world and write down three things, each with the object it came from:
+**Light or dark** comes from the scene: who, where, under what light. Never by category or habit.
 
-| Decide | Take it from | Examples |
-| --- | --- | --- |
-| **Light or dark** | when and where the subject is used | a bus stop at dusk → dark; a garden bench in daylight → light; a lifting platform under hall lights → dark concrete |
-| **The base ramp's temperature** | the dominant surface in that place | galvanised steel (cool grey), rubber gym floor (warm charcoal), kraft paper (warm), night sky (blue-black) |
-| **The accent** | the one small thing in the world that *points* | a bus's amber "stopping" light, a watering can's paint, a bar collar, a library date stamp's ink |
-| **The text face** | the printed matter of that world | transit signage (a DIN-like grotesk), a seed catalogue (a humanist sans), a gym's plate stamping (a condensed sans) |
+### Offer 2–3 directions, then preview
 
-**Defaults are a smell, not a choice.** If you reach for the accent, face or base before naming the
-object it came from, it is the house default leaking in. Models converge on: a light cool grey base,
-a cobalt blue accent (`#24xxC9`), Figtree or Inter, Libre Franklin with Courier Prime for anything
-"typed", and red as the banned colour. Also: dark warm base every time, and a paper prop as the signature. Any one can be
-right *if the world gives it to you*; picking it because it is safe is the same mistake as the cream
-editorial default, one layer down.
+Directions must really differ: vary at least two of the feel, light or dark, the character
+source, the colour strategy and the dials. Each gets its brief and a preview: one HTML file with
+the home screens side by side, rendered once (or ASCII sketches if you can't render). Previews
+follow the same rules as finals: art never overlaps text, nothing clips. Mark your
+recommendation in one line. Judge directions by fit to the scene and feel first and
+novelty second: the cosiest fit for a homely app beats the cleverest concept. Build after they pick (or mix them), and show the first full screen
+before the rest.
 
-**Check:** put your accent, face and base next to the last app you designed. If they match and the
-worlds don't, change the base.
+### Defaults are a smell
 
-## 2. The quiet base
+AI-made apps cluster around a few looks regardless of subject:
+- warm cream paper, a high-contrast serif (Fraunces, Playfair), a terracotta or red accent;
+- near-black with one neon or blue accent;
+- a dark screen with a literal object as the hero (a panel, a ticket, a sign);
+- Inter, Figtree or DM Sans on light grey with a cobalt button.
 
-The base should be nearly invisible, so the signature has room.
-- **A neutral ramp of 3–4 surfaces**, each step lighter (dark) or whiter (light):
-  page → card → raised → pressed. Separate surfaces **by fill only**.
-  - Tabi: `#262624 → #30302E → #3A3935`, warm.
-  - Cite dark: `#000 → #141414 → #1C1C1E → #242424`.
-- **Sheets take the page colour,** so cards on them still stand out.
-- **Text in 3 tiers** (primary, body, muted), each checked against the surfaces it sits on, with the
-  contrast ratio written in a comment.
-- **Type: a calm text face for reading,** chosen from the world's printed matter (§ 1), not
-  Inter, Roboto or the platform face, and not whichever sans you used last time. Load it
-  as a custom font so it measures the same on iOS and Android. Give the scale 8–12 steps and stick
-  to them: off-scale sizes are the first thing to drift.
-- **Letter spacing:** negative on large text, positive on small uppercase.
-- **Spacing:** 4/8/16/24/32(/48). Use 16 for screen edges and 24 between sections, and separate
-  sections by space, not lines. Hairlines go only between rows inside a grouped card.
-- **One radius family:** chip 8, control 12, card 14–16, sheet top 22–28, pill.
-- **Flat sections.** A sheet or screen is a stack of: label, an optional one-line purpose sentence,
-  then content. No card per section.
-- **No outlines as decoration.** A faint 1-px border is the most common "templated" tell. Use a fill.
-  For layout stability, give every button, input and menu row a **transparent border** of the
-  width a focus or picked edge will use (e.g. 1.5), so state changes never move a pixel.
-- **Inputs:** a filled field with a transparent border. On focus, a ring in the *text* colour (not the
-  accent) and the fill lifts one step.
-- **Dark mode is designed, not inverted.** True black or warm dark, its own surface ramp. Imagery
-  and maps are colour-graded to sit flush with it (Cite grades the night map with a LUT).
+Any of these can be right when the direction calls for it. If someone could guess the look from
+the app's category alone, or it matches the last app you made, rework the direction.
 
-### The UX floor (every screen)
+## 2. Layout: familiar structure, personal surface
 
-- **Lead with the one thing.** The top of a home screen answers "what should I do now?" with one
-  hero (tonight's dinner, the next bus, today's set) and its primary action inside it. Lists and
-  history come after.
-- **Every row shows its state on the right,** aligned in one column (7 min, 5 of 12, Sun, ✓), so
-  the eye can scan down it.
-- **Prefer taps to typing.** Small counts get a stepper, common answers get chips, free text is the
-  last field and optional. Sheets keep the primary above the keyboard.
-- **Tap targets at least 44 pt;** primary actions sit in the thumb zone (in the hero, or at the
-  bottom of a sheet).
-- **Numbers use tabular figures** wherever they stack or change (times, prices, weights), so they
-  don't jitter.
-- **Undo beats confirm.** For reversible acts (log, mark done, remove from list) act at once and
-  offer undo in the toast. Save the confirm popup for destructive, irreversible acts.
-- **Progress is visible:** "5 of 12 picked" with a thin bar, ticks on days that are done.
+An app is a tool people return to. Its **layout, navigation and controls stay familiar for the
+platform**: tab bars, lists, buttons, inputs and sheets people already know how to use. The
+direction's character comes through **colour, type, density, illustration, motion, voice and the
+signature move**. A world never replaces a control: no buzzer-panel rota, no dashboard-dial
+forms, no fake hardware. Test: with the name covered, does it still read as a good app of its
+kind, and is it more personal than the usual one?
 
-## 3. Ration the accent
+Within that:
+- **The home screen is a glanceable summary.** List the 3–5 things people open the app to check
+  (a flatmates app: my next chore, who owes whom, the week's rota, recent bills) and show each one
+  on the first screen with its key fact: a number, a name, a day, a status. Then order them:
+  - **the hero** answers "what now?" with one main action, and stays compact: around a quarter
+    of the screen, with art beside or behind the text, never a big picture above it;
+  - **a summary row** of the key numbers, with the breakdown in a line (You're owed £48.20 ·
+    Maya £31.70 · Tom £16.50);
+  - **the lists** people scan (the rota for everyone, recent activity), each row with its state
+    on the right and a "See all".
+  Test: after one look at the home screen, can someone answer each of those questions without
+  tapping? Art, the signature move and personality never take more room than the information
+  they carry.
+- **Actions:** add one only when people need it there. A second button on a card is fine when
+  it's used often; it's never filler.
+- **Rows show their state on the right,** in one column (7 min, 5 of 12, ✓).
+- **Taps over typing:** steppers for counts, chips for common answers, free text last.
+- **Tap targets at least 44 pt;** main actions in the thumb zone.
+- **Tabular figures** where numbers stack or change.
+- **Undo beats confirm** for reversible acts; confirm only destructive ones.
+- **Density follows the dial.** When a screen feels cluttered for its job, distil it: remove
+  repeated information, merge similar actions, hide rare options. Don't strip a complex task
+  down to look minimal; match complexity to the task.
 
-- **The accent is a pointer:** selected, next step, waiting on you. Not headings, not decoration,
-  not every icon.
-- **One primary filled action per view.** Everything else is quieter:
-  - Tabi: lowercase mono text actions with an accent `›`;
-  - Cite: a neutral secondary button and a square `…` button.
-- **Dismissal is an X, not a button.** In a sheet or modal, "not now" / "cancel" is a 32-pt round
-  close button (✕) in the header, top right, on a fill step. The bottom of the sheet holds only the
-  primary action, full width, so nothing competes with it.
-- **A real alternative action is an outlined button:** when the second choice *does* something
-  ("Swap dinner", "Skip set", "Cooked it"), it sits beside or inside the same card as the primary,
-  same height and radius, transparent fill, a 1.5-pt edge in the primary text colour (or a fill step
-  on a dark card). Bare text next to a filled button reads as a label, not a tap target. Bare text
-  with a `›` is fine for links that sit *elsewhere* (in a list, under a section).
-- **The primary button carries an icon** (16–20 pt, leading, same colour as its label) that shows
-  the act: ▶ start, ✓ done, ✎ write, + add. The label names the act and, when useful, its result
-  ("Log dinner · 6th this week").
-- **Split the accent by job** when contrast demands it: Cite uses bright green for text and icons
-  and deep enamel green for fills, with white text on the fill. Text on an accent fill is whatever
-  passes contrast (Tabi uses dark ink on terracotta).
-- **No neon fills.** A bright, light, saturated accent (mint, cyan, lime, electric yellow) as a
-  big button fill on a dark page reads as a gaming site, not a tool. Split the accent:
-  - **the fill** is deep and muted: HSL saturation under ~55%, lightness 25–45%, with light text on
-    it (e.g. walk-signal teal as a fill is `#1E6F5E`, not `#33D6B2`);
-  - **marks and edges** (the live dot, the tab underline, a picked edge) can be lighter, but still
-    desaturated (`#6DB8A5`, not `#33D6B2`).
-  Tabi's terracotta `#D97757` is the ceiling for brightness: warm, mid-light, never glowing.
-- **The focus ring uses the text colour,** which keeps the accent scarce.
-- **In dark mode the primary button may be white,** not the accent (Cite). Accent fills on a dark
-  page quickly turn the whole app one colour.
-- **Name a banned colour** and write down why (Tabi: no gold except crowns and medals; it reads
-  cheap and fights the accent). The world often supplies it: on a library slip red means overdue,
-  so a reading app bans red and shows a missed day as a blank row, not a fine.
-- **Which selected states get the accent:** the one choice that drives the view's primary action
-  (the picked book, the picked plan) gets an accent edge or fill. Secondary pickers in the same view
-  (a duration chip, a filter, a "when?" segment) get a fill step **plus a 1.5-pt edge in the primary
-  text colour**, drawn on the transparent border every option already reserves. A fill step alone is
-  too quiet to read as picked, and the accent would compete with the primary choice. If everything
-  picked is orange, nothing is.
-- **A signature object may carry the accent only when it *is* the next step** (today's empty row on
-  the slip: "today ›"). Otherwise it keeps its own paints.
-- **Budget it:** count accent call sites, and cap or ratchet them with a test (guard-tests.md).
+## 3. Colour and surfaces
 
-## 4. Quarantine the loud parts
+- Follow the colour strategy from the brief. Every colour has a job, written in the system.
+- **Surfaces:** a ramp of 3–4 steps (page → card → raised → pressed), separated by fill rather
+  than faint 1-px outlines. Reserve a transparent border on controls so a focus or picked edge
+  never shifts layout.
+- **Shadows** only on what floats or on a hero that should lift. One elevation method, not a
+  border and a shadow together.
+- **Text in 3 tiers**, each contrast-checked (4.5:1 body, 3:1 large). On a coloured surface, tint
+  secondary text from that colour, not grey.
+- **No neon fills.** Bright mint, cyan, lime or electric yellow as a big fill on dark reads as a
+  gaming site. Keep fills deep and muted (HSL saturation under ~55%, lightness 25–45% on dark),
+  lighter tints only for small marks. A soft warm colour (butter on moss) is fine; glowing is not.
+- **One primary filled action per view, balanced with its surface.** The primary button should
+  stand out without shouting. On a light page or sheet, don't use a near-black or very dark,
+  saturated fill (deep damson, navy, black): it becomes the heaviest thing on the screen. Use a
+  mid-depth tone of the accent instead (roughly HSL lightness 35–50%, saturation under ~50%),
+  so the fill sits 3–6:1 against the surface it's on, while the label on it still passes 4.5:1.
+  Check it on the sheet as well as the page: sheets are often lighter, which makes the same
+  fill feel heavier. Make it a token (`accent-fill`) separate from the deep shade used for edges.
+- **Tints and shades, not black and grey.** Fields and selected states use lighter and deeper
+  versions of the app's own colours, so they feel part of the palette:
+  - **input fields** sit on a fill tinted from the page or accent hue (a warm cream field on a
+    cream sheet), a clearly visible step from the sheet, never near-white or pure white with a
+    black border; on focus, the edge turns a deeper shade of the accent;
+  - **a selected option** (a picked card, chip or person) gets a pale tint of the accent, or of
+    the item's own colour (a flatmate's colour), plus an edge in a deeper shade of that same hue,
+    and a check when it helps. Never a fill step alone, and never a black outline;
+  - **unselected options** stay on the neutral fill, quiet;
+  - make the tints tokens (`accent-tint`, `accent-shade`, per-person tints) and check text on
+    each tint for contrast.
+- **Dark mode is designed, not inverted.** In dark mode a tint is a deep, low-lightness version
+  of the hue, with a lighter shade for the edge.
 
-- **The signature face** (Cite's Big Shoulders Black, Tabi's pixel face) appears only on signature
-  objects. Enforce it with a test. Headings use the calm faces.
-- **Signature paints are fixed:** the same in light and dark, because they are *objects*, not chrome.
-  Compute the lettering colour by contrast (`inkFor(board)`), never by hand.
-- **One big moment per screen at most** (Tabi's pixel face, Cite's painted board picker).
-- **A three-voice type system** when the world suits it (Tabi): serif titles, sans prose, and bold
-  mono for every label, number, button and kicker. Uppercase kickers are a per-app choice: Tabi
-  uses tracked mono kickers above every group, while Cite bans uppercase kickers above headings.
-  Decide once and write it down.
-- **Objects or hero cards for content, flat chrome for controls** (Tabi: quests as pinned notes
-  on a dark board; a meal app: tonight's dinner as a dark illustrated card). Shadows exist only on
-  those and on floating layers.
+## 4. Components (craft defaults)
 
-## 5. Replace system chrome
+Pick the ones the direction suits, write them into the system, then use them identically.
+- **Sheet dismissal:** a ✕ in the header rather than a bottom "Cancel".
+- **Sheet header:** a clear title naming the thing ("New shared bill"). Add a thumbnail or context
+  line only when the sheet acts on a specific object you'd otherwise lose track of.
+- **Primary button:** a leading icon that shows the act (✓, +, ▶); the label names the act,
+  optionally with its result ("Add bill · £84.60").
+- **Secondary action,** when there is one: an outlined button (1.5-pt edge in the text colour),
+  not bare text that reads as a label.
+- **Consequence line** above the primary when the outcome isn't obvious (money moving, data
+  deleted).
+- **Your own popup, toast, skeleton:** no system alerts, emoji or default spinners. Popups ask a
+  question, the cancel says what you keep, the destructive button names the act.
+- **Icons:** one library or one drawn set, one stroke, fixed sizes.
+- **Tab bar:** one active signal.
+- **Every state designed:** pressed, focused, selected, disabled, loading, error, empty.
 
-- **Your own popup:**
-  - the title is a question;
-  - the cancel button says what you keep ("Keep my account");
-  - the destructive button names the act ("Delete");
-  - it uses your type.
-- **Your own toast:** a short title plus an optional consequence line, with a signature mark (`[ ✓ ]`).
-- **Your own bottom sheet:** one shared component that owns the backdrop, motion and handle. Sheet
-  heights are measured from content, not guessed.
-- **The sheet header names the thing you're acting on:** a 44–48-pt thumbnail of the object (the
-  dish illustration, the book cover, the bus's route plate), a small context line ("Log tonight's
-  dinner"), the object's name as the title, and the ✕ on the right. You always know what the sheet
-  is about without reading the body.
-- **Show the consequence before the commit:** a quiet line or tinted note above the primary
-  button says what will happen ("We'll take 2 salmon fillets and 1 bunch of chard out of your
-  pantry", "Food goes from £22.15 to £17.95").
-- **Shaped skeletons** that look like the results arriving: varied widths, fading down the list,
-  shown only after a ~120 ms delay so fast loads never flash.
-- **Icons:** one library in one style (outline) at fixed sizes (12/16/20/24), or hand-made pixel
-  icons. No system emoji in the UI.
-- **Tab bar:** one clear active signal, not three (Cite: one sliding 18×2 underline; Tabi:
-  `[SELECTED]` brackets). Remove the redundant fill + scale + colour.
+## 5. Motion
 
-## 6. Motion
+Motion has a personality too, set by the motion dial and the feel: a playful app can be bouncier,
+a calm tool crisp and quick. Then decide each animation in this order:
 
-- **Chrome never bounces.** Sheets use the iOS drawer curve `bezier(0.32, 0.72, 0, 1)`, about 340 ms
-  in and 220 ms out, or a critically damped spring with overshoot clamped (about 210 ms).
-- **Press feedback:** scale 0.97 (icons 0.9), about 110 ms in and 160 ms out; or an opacity or
-  colour step for rows and text. Rows don't scale.
-- **One arrival motion everywhere:** fade and rise 6 pt, 260 ms, ease-out cubic. Then loading
-  always feels the same.
-- **Popups:** 200 ms in and 140 ms out, rising 12 pt with scale 0.97.
-- **Bounce is only for playful objects:** map pins, emotes, a toast's entrance.
-- **Ambient (looping) motion only where it means something:** a live dot breathing in sync across the
-  app, a chasing outline on the one control that creates something, a shimmer with rest time.
-- **Signature transitions** come from the world (Tabi's glyph ink dissolve from the tap point).
-  Wait for the next screen to render before clearing.
-- **Haptics are scarce:** a light impact on the ceremonial actions, selection on tab change, success
-  on completion.
-- **Respect Reduce Motion:** skip dissolves, fade only, stop blinking cursors.
-- **Animate only transform and opacity,** at 60 fps.
+1. **Should it animate?** By how often people see it:
 
-## 7. Copy
+   | Frequency | Decision |
+   | --- | --- |
+   | Many times a minute (typing, keyboard, list navigation) | No animation |
+   | Tens of times a day (tab switch, toggles) | Minimal, fast |
+   | Occasional (sheets, toasts, popups) | Standard |
+   | Rare (first run, a milestone, a celebration) | Room for delight |
 
-- **Plain and concrete, and it explains why:** "The organiser sees who is coming, so an RSVP needs a
-  name."
-- **The home header: greeting, question or plain title, decided per app.** A personal, daily app
-  can open with a line in its own voice that names the decision ("What's for supper, Kimani?",
-  "Leeks tonight, Nia?", "Evening, Kimani"). A utility you open to check one thing keeps a plain title
-  ("Your stops", "This week"). Don't greet in every app; don't greet with nothing to say. When you
-  greet, make it about the one thing (tonight's dinner), not a generic "Good morning".
-- **Labels can be questions:** "Where did you stop?", "Is this still accurate?"
-- **Buttons are verb-first and name the act:** "Post a quest", "Call it off". Secondary actions can
-  be lowercase ("not now", "skip"), drawn as outlined buttons when they share a row with the
-  primary (§ 3).
-- **Empty states:** a scene or icon, a title, one sentence that teaches how it fills, and the next
-  step ("find a quest on the map ›"). Never a lone grey line.
-- **Errors:** "Couldn't load {what}" plus what to do ("Check your connection and try again.").
-- **Optional fields say so in brackets after the label:** "Anything you changed? (optional)", in
-  the muted tier. Never a separate word floating to the side, and never an asterisk on the required
-  ones instead.
-- **Placeholders:** local and specific ("e.g. Free patties at the Student Union").
-- **No hype.** Exclamation marks almost never; the app's nouns carry the playfulness.
-- **Pick per app and write down:** contractions (Tabi yes, Cite no), British or American spelling,
-  em dashes (both apps ban them in UI copy; use colons or full stops).
+2. **What's it for?** Feedback, showing a state change, keeping space consistent, or explaining.
+   "It looks cool" isn't enough for something seen often.
+3. **Easing:** entering and exiting use ease-out (strong curves such as
+   `cubic-bezier(0.23, 1, 0.32, 1)`); moving on screen uses ease-in-out; never ease-in for UI.
+   Sheets use the drawer curve `cubic-bezier(0.32, 0.72, 0, 1)`.
+4. **Duration:** press 100–160 ms; small popovers 125–200 ms; sheets 200–500 ms; most UI under
+   300 ms. Exits faster than entrances.
 
-## 8. Illustration in the UI
+Also: press feedback at scale 0.97 (never animate from scale 0; start at 0.95 with opacity);
+springs for gestures and things that should feel alive, bounce 0.1–0.3 when the feel allows;
+transitions over keyframes for anything interruptible; one shared arrival motion; looping motion
+only for live things; honour Reduce Motion; animate transform and opacity only.
 
-- Art **melts** into whatever is behind it (a smoothstep over the bottom 30–40%, never a hard band).
-- Headers are transparent over a scene. Screen tops can be scenes, not toolbars.
-- **Art never touches text or controls.** When an illustration bleeds off a card's edge, it stays
-  inside its own corner: a safe zone around the title, the meta row and the buttons is kept clear
-  (at least 12 pt). Check the longest title and the narrowest (320-pt) width; shrink or move the art
-  before you shrink the text.
-- Busy art never goes behind data. Keep backdrops calm and put the art where the reading isn't.
+## 6. Copy
 
-## 9. Write it down
+The voice comes from the brief and runs through every screen, not just the header.
+- **Header:** a greeting ("Morning, Kimani"), a question ("What's for supper?"), the job ("Bins are
+  yours tonight") or a plain title, whichever fits the voice.
+- **Buttons are verb-first** and name the act.
+- **Empty states** teach how they fill and offer the next step, in the app's voice.
+- **Errors** say what failed and what to do; warmth is fine, jokes about money or lost work aren't.
+- **Optional fields:** "Label (optional)".
+- **Placeholders and sample data** are specific and realistic (real-sounding names, messy numbers).
+- **No hype** or exclamation marks; let the content carry the fun.
+- Per app, write down: contractions, spelling, em dashes.
 
-- **Every token gets a comment** with its measured reason: "4.62:1 on card", "was 13, read as body text".
-- **A DESIGN.md** (or, if the project keeps no docs, the header of the theme file): the
-  one-sentence world, the tokens, the rules with reasons, and the rejected approaches with why.
-- **Guard tests** for the rules that drift (guard-tests.md).
+## 7. Illustration
+
+- One style for the whole app (stroke weight, palette subset, level of detail), written into the
+  system. Friendly apps get friendly art; it should match the feel, not a trend.
+- **Art never overlaps text or controls,** in previews and finals: a 12-pt clear zone around
+  titles, meta rows and buttons, checked with the longest title and at 320 pt.
+- Art melts into what's behind it (a soft fade, never a hard band). Busy art never sits behind data.
+
+## 8. Write it down
+
+- DESIGN.md: the direction brief at the top, then the system (design-system.md).
+- Every token gets a comment with its reason ("4.62:1 on card").
+- Guard tests for the rules that drift (guard-tests.md).
