@@ -25,7 +25,7 @@ comment block.
 | Space | 4 / 8 / 12 / 16 / 24 / 32 / 48 | 16 screen edge, 24 between sections |
 | Radius | one family: small (chip), medium (control), large (card), sheet, pill | |
 | Elevation | none, float (sheets, popups, toasts) | Two levels is usually enough |
-| Motion | durations (press / small / sheet), easing curves (out, in-out, drawer), spring settings, the one arrival motion | Set from the motion dial and feel (method.md § 5) |
+| Motion | durations (press / small / sheet), easing curves (out, in-out, drawer), spring settings, the one arrival motion | Set from the motion dial and feel (method.md § 6) |
 | Size | tap target min (44), icon sizes (16 / 20 / 24), avatar sizes | |
 
 Light and dark are two *values* for the same token names, never separate tokens.

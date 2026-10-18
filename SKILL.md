@@ -38,14 +38,18 @@ Not for illustration technique (glyph scenes, pixel mascots): see `ascii-scenes-
    none), then show 2–3 directions that differ in feel, each with a quick preview. Build after
    the person picks; no one to ask, pick the strongest and say why. Write the chosen direction
    as a **direction brief** at the top of DESIGN.md. method.md § 1.
-3. **Build the design system from the direction:** tokens, components with every state,
+3. **List the features at full depth:** the core jobs, what the best apps in the category
+   have, helpful extras and every state. Recommend them to the person; when no one answers,
+   include them at sensible defaults. Density changes how they're shown, never whether they
+   exist. method.md § 2.
+4. **Build the design system from the direction:** tokens, components with every state,
    patterns, usage rules. design-system.md.
-4. **Lay out screens from the system only.** Every value is a token, every control a system
-   component. The direction's character shows in colour, type, density, art, motion and voice;
-   layout, navigation and controls stay familiar for the platform. method.md § 2.
-5. **Apply the craft defaults the direction calls for:** colour, components, motion, copy,
-   illustration. method.md § 3–7.
-6. **Verify in one bounded pass:** render at 402 and 320 pt wide (light and dark if both ship),
+5. **Lay out screens from the system only.** Every value is a token, every control a system
+   component. The composition and navigation model come from the direction; controls stay
+   familiar for the platform. method.md § 3.
+6. **Apply the craft defaults the direction calls for:** colour, components, motion, copy,
+   illustration. method.md § 4–8.
+7. **Verify in one bounded pass:** render at 402 and 320 pt wide (light and dark if both ship),
    run review.md including the consistency audit, fix everything in one batch, re-render once.
 
 ## Common mistakes
@@ -57,15 +61,17 @@ Not for illustration technique (glyph scenes, pixel mascots): see `ascii-scenes-
 | The world as a costume: a buzzer panel, dashboard dials, a road stencil standing in for UI | In an app the world lends type, palette, density, art and one signature move; controls stay standard |
 | Grey screens with one rationed accent called "restraint" | Choose a colour strategy (restrained, committed, full palette, drenched) from the direction |
 | Stripping charm for purity: no avatars in colour, no art, no greeting | Charm is part of the direction. Keep it when the feel calls for it |
+| A thinner product than the category expects: no sounds in a sleep app, no pace in a budget app | Features at full depth first; sparse directions put extras one tap away, not nowhere (method.md § 2) |
 | Simplifying everything by reflex | Density comes from the direction and the task. Distil when a screen is cluttered, not always |
-| A big art hero and little else on the home screen | Home is a glanceable summary: compact hero, key numbers, the lists people scan (method.md § 2) |
+| Every home is the template stack: greeting, hero card, stat tiles, list in a card, tab bar with a plus | Choose a composition from the direction (single focus, scene + sheet, timeline, shelves, bento, type-led…) and a navigation model (method.md § 3) |
+| A big art hero and little else on the home screen | Whatever the composition, every key question is answerable at a glance (method.md § 3) |
 | A second button because the card has room | Add an action only when people need it there |
 | Every app dark, or cream paper with Fraunces, or a dark object hero | Check against the AI defaults and your last app (method.md § 1) |
 | No design system: literal hex values, off-scale sizes, three button styles | Tokens and components first, screens second (design-system.md) |
 | Motion that ignores the feel: every app crisp, or every app bouncy | Motion personality is part of the direction; frequency decides whether it animates at all |
 | Neon accent fills (mint, cyan, lime), or near-black slabs on a light sheet | Muted, mid-depth fills that sit 3–6:1 against their surface, with light text |
 | System alerts, emoji, default spinners | The app's own popup, icons and skeletons |
-| Fields and picked states in white, grey and black outlines | Tints and shades of the app's own colours (method.md § 3) |
+| Fields and picked states in white, grey and black outlines | Tints and shades of the app's own colours (method.md § 4) |
 | Art overlapping text, in finals or previews | A 12-pt clear zone around text and buttons in every render |
 
 ## Files

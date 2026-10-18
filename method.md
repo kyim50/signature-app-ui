@@ -46,6 +46,7 @@ top of DESIGN.md; every later decision is checked against it.
 | **Type** | the faces and why they fit the feel | a rounded grotesk for headings, a friendly sans for text |
 | **Dials** | expression, density, motion, each 1–10 | expression 6, density 4, motion 5 |
 | **Voice** | how the copy talks, with two sample lines | "Morning, Kimani", "Bins are yours tonight" |
+| **Composition** | the home's layout and the navigation model (§ 3) | a timeline of the week's chores down the screen; floating pill nav |
 | **Signature move** | the one thing people would remember | each flatmate's colour follows them through rota, bills and avatars |
 | **Never** | what it must not become | a banking app; a chore-nagging app |
 
@@ -53,7 +54,7 @@ top of DESIGN.md; every later decision is checked against it.
 - **Expression** 1–10: 1 is calm and conventional, 10 is bold, art-led, surprising.
 - **Density** 1–10: 1 is airy with one thing per screen, 10 is packed like a cockpit. A rota
   app sits low; a finance tracker can sit higher. Set it from the task, not from taste.
-- **Motion** 1–10: 1 is near-static, 10 is lively and physical (see § 5).
+- **Motion** 1–10: 1 is near-static, 10 is lively and physical (see § 6).
 
 **Character sources.** Any of these can carry an app; most use one or two:
 
@@ -82,8 +83,8 @@ only when the feel asks for it.
 
 ### Offer 2–3 directions, then preview
 
-Directions must really differ: vary at least two of the feel, light or dark, the character
-source, the colour strategy and the dials. Each gets its brief and a preview: one HTML file with
+Directions must really differ: each has a different composition (§ 3), and they vary at least
+two of the feel, light or dark, the character source, the colour strategy and the dials. Each gets its brief and a preview: one HTML file with
 the home screens side by side, rendered once (or ASCII sketches if you can't render). Previews
 follow the same rules as finals: art never overlaps text, nothing clips. Mark your
 recommendation in one line. Judge directions by fit to the scene and feel first and
@@ -101,28 +102,81 @@ AI-made apps cluster around a few looks regardless of subject:
 Any of these can be right when the direction calls for it. If someone could guess the look from
 the app's category alone, or it matches the last app you made, rework the direction.
 
-## 2. Layout: familiar structure, personal surface
+## 2. Features and content: full depth first
 
-An app is a tool people return to. Its **layout, navigation and controls stay familiar for the
-platform**: tab bars, lists, buttons, inputs and sheets people already know how to use. The
-direction's character comes through **colour, type, density, illustration, motion, voice and the
-signature move**. A world never replaces a control: no buzzer-panel rota, no dashboard-dial
-forms, no fake hardware. Test: with the name covered, does it still read as a good app of its
-kind, and is it more personal than the usual one?
+Decide what the app does before deciding how it looks. A mockup should show the product at the
+depth a good app in its category would have, not a skeleton.
 
-Within that:
-- **The home screen is a glanceable summary.** List the 3–5 things people open the app to check
-  (a flatmates app: my next chore, who owes whom, the week's rota, recent bills) and show each one
-  on the first screen with its key fact: a number, a name, a day, a status. Then order them:
-  - **the hero** answers "what now?" with one main action, and stays compact: around a quarter
-    of the screen, with art beside or behind the text, never a big picture above it;
-  - **a summary row** of the key numbers, with the breakdown in a line (You're owed £48.20 ·
-    Maya £31.70 · Tom £16.50);
-  - **the lists** people scan (the rota for everyone, recent activity), each row with its state
-    on the right and a "See all".
-  Test: after one look at the home screen, can someone answer each of those questions without
-  tapping? Art, the signature move and personality never take more room than the information
-  they carry.
+**Make a feature list per screen** before laying it out:
+- **The core jobs** from the brief (log a run, add a bill).
+- **What the category expects:** look at how the best apps of this kind work and list what
+  people would miss if it weren't there (a sleep app: sounds, a breathing guide, wake-ups, sleep
+  tags, a streak; a budget app: pace, upcoming bills, per-category limits, a receipt photo).
+- **Helpful extras the brief suggests:** smart defaults, suggestions from history, a
+  consequence line, a gentle nudge, an undo.
+- **States:** empty, first run, done, missed, error.
+
+**Recommend, don't silently cut.** When a person is in the loop, offer the list as options
+("Recommended for a sleep app: rain/brown-noise sounds, a 4-7-8 breathing guide, sleep tags.
+Include them?"). When a question goes unanswered or no one can be asked, include the
+recommended features at sensible defaults and say so; don't drop them.
+
+**Density decides presentation, not scope.** A sparse direction (density 2) keeps the same
+features as a dense one; it shows fewer at once and puts the rest one tap away (a sound chip
+that opens a picker, tags behind "Add details", a breathing guide as an option on the timer).
+"Simple" means calm and well ordered, not missing things.
+
+## 3. Layout: familiar controls, composed with intent
+
+**Controls stay familiar; composition doesn't have to.** Buttons, inputs, lists, sheets and tab
+bars behave the way people expect on the platform, and a world never replaces a control (no
+buzzer-panel rota, no dashboard-dial forms, no fake hardware). But how a screen is *composed*,
+what leads, how big it is, how the eye moves and how navigation works, is a design decision
+and should come from the direction like the colour does.
+
+**The template to break.** Almost every AI-made app home is the same stack: greeting header,
+rounded hero card, a row of 2–4 stat tiles, a list in a card, a tab bar with a centre plus.
+It's fine when chosen; as the default it makes every app the same app. Before laying out the
+home, name the stack you'd reach for, then pick a composition on purpose.
+
+### Compositions to choose from
+
+| Composition | What leads | Suits |
+| --- | --- | --- |
+| **Single focus** | one huge thing (a number, a countdown, a face) fills most of the screen; everything else is one line or one swipe away | timers, "how much is left", one-job apps |
+| **Full-bleed scene + sheet** | art or a map owns the screen; content lives in a draggable sheet over it | ambient, place-based, mascot-led apps |
+| **Type-led / editorial** | big confident type does the work; few or no cards; content flows like a page | reading, journaling, calm tools |
+| **Agenda / timeline** | time runs down the screen; now is marked; past fades, future waits | routines, schedules, logs, plans |
+| **Shelves** | horizontal rows of things to pick from, each a category | content, recipes, routes, collections |
+| **Grid / bento** | tiles of different sizes, weighted by importance | dashboards, at-a-glance summaries |
+| **Colour-block header** | a committed colour fills the top third with the key fact; the rest is calm | status-led apps, a single headline number |
+| **Conversation / feed** | items arrive as a stream, newest at the thumb | social, coaching, notifications |
+| **Bottom-anchored** | content stacks up from the thumb; the top is open, quiet space | one-handed, quick-check apps |
+| **Canvas / board** | a spatial surface you pan or arrange (a floor plan, a map, a pinboard) | planning, spatial data |
+
+**Navigation models** are a choice too: a standard tab bar; a floating pill bar; no tab bar at
+all (one screen plus sheets, for small apps); a top segmented control; a single primary action
+button with everything else behind it. Pick the lightest one the app's size allows.
+
+**Rules for choosing:**
+- The composition comes from the brief: the scene (one hand on a bus favours bottom-anchored),
+  the job (a countdown favours single focus), the expression dial (high expression allows a
+  bolder composition) and the density dial.
+- The 2–3 directions in § 1 must differ in **composition**, not only colour and type. Each
+  direction names its composition and navigation model in the brief.
+- A bold composition still uses standard controls and stays easy: with the name covered, can
+  someone do the main task from it in seconds?
+- Vary from your last app: if it used the template stack, this one shouldn't by default.
+
+### The home must be glanceable, in any composition
+
+List the 3–5 things people open the app to check (a flatmates app: my next chore, who owes
+whom, the week's rota, recent bills). Whatever the composition, each one is answerable from the
+first screen without tapping: a number, a name, a day, a status. A single-focus home shows the
+one big thing and puts the rest in a line beneath or a short swipe; a timeline shows them in
+time order; a bento weights them by size. Art, the signature move and personality never take
+more room than the information they carry.
+
 - **Actions:** add one only when people need it there. A second button on a card is fine when
   it's used often; it's never filler.
 - **Rows show their state on the right,** in one column (7 min, 5 of 12, ✓).
@@ -134,7 +188,7 @@ Within that:
   repeated information, merge similar actions, hide rare options. Don't strip a complex task
   down to look minimal; match complexity to the task.
 
-## 3. Colour and surfaces
+## 4. Colour and surfaces
 
 - Follow the colour strategy from the brief. Every colour has a job, written in the system.
 - **Surfaces:** a ramp of 3–4 steps (page → card → raised → pressed), separated by fill rather
@@ -168,7 +222,7 @@ Within that:
 - **Dark mode is designed, not inverted.** In dark mode a tint is a deep, low-lightness version
   of the hue, with a lighter shade for the edge.
 
-## 4. Components (craft defaults)
+## 5. Components (craft defaults)
 
 Pick the ones the direction suits, write them into the system, then use them identically.
 - **Sheet dismissal:** a ✕ in the header rather than a bottom "Cancel".
@@ -186,7 +240,7 @@ Pick the ones the direction suits, write them into the system, then use them ide
 - **Tab bar:** one active signal.
 - **Every state designed:** pressed, focused, selected, disabled, loading, error, empty.
 
-## 5. Motion
+## 6. Motion
 
 Motion has a personality too, set by the motion dial and the feel: a playful app can be bouncier,
 a calm tool crisp and quick. Then decide each animation in this order:
@@ -213,7 +267,7 @@ springs for gestures and things that should feel alive, bounce 0.1–0.3 when th
 transitions over keyframes for anything interruptible; one shared arrival motion; looping motion
 only for live things; honour Reduce Motion; animate transform and opacity only.
 
-## 6. Copy
+## 7. Copy
 
 The voice comes from the brief and runs through every screen, not just the header.
 - **Header:** a greeting ("Morning, Kimani"), a question ("What's for supper?"), the job ("Bins are
@@ -226,7 +280,7 @@ The voice comes from the brief and runs through every screen, not just the heade
 - **No hype** or exclamation marks; let the content carry the fun.
 - Per app, write down: contractions, spelling, em dashes.
 
-## 7. Illustration
+## 8. Illustration
 
 - One style for the whole app (stroke weight, palette subset, level of detail), written into the
   system. Friendly apps get friendly art; it should match the feel, not a trend.
@@ -234,7 +288,7 @@ The voice comes from the brief and runs through every screen, not just the heade
   titles, meta rows and buttons, checked with the longest title and at 320 pt.
 - Art melts into what's behind it (a soft fade, never a hard band). Busy art never sits behind data.
 
-## 8. Write it down
+## 9. Write it down
 
 - DESIGN.md: the direction brief at the top, then the system (design-system.md).
 - Every token gets a comment with its reason ("4.62:1 on card").

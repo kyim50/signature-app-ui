@@ -17,11 +17,15 @@ re-render once. Don't loop.
 - [ ] Would someone enjoy opening this? Is there charm where the feel calls for it?
 - [ ] Cover the logo: still recognisably this app? Does it avoid the AI default looks
   (method.md § 1) and differ from the last app you made?
-- [ ] Layout, navigation and controls are familiar for the platform; no world-as-costume UI.
+- [ ] Controls are familiar for the platform; no world-as-costume UI.
 
 ## Density and actions
-- [ ] Home is a glanceable summary: each thing people open the app to check is on the first
-  screen with its key fact; the hero is compact; art never takes more room than the information.
+- [ ] The product has the depth of a good app in its category (core jobs, expected features,
+  helpful extras, states); sparse directions tuck extras one tap away instead of cutting them.
+- [ ] The composition and navigation model were chosen from the direction, not the template stack
+  (greeting, hero card, stat tiles, list card, tab bar with a plus) by default.
+- [ ] Home is glanceable in its composition: each thing people open the app to check is
+  answerable from the first screen; art never takes more room than the information.
 - [ ] Density matches the dial and the task: nothing cluttered for its job, nothing stripped from
   a task that needs it.
 - [ ] Every action is one people need there; no filler buttons.
