@@ -35,12 +35,17 @@ finding with a file:line and a fix.
 - [ ] Popup: the title is a question, the cancel says what you keep, the destructive button names the act.
 - [ ] The tab bar has one active signal.
 
+- [ ] Illustration never touches text or buttons (12-pt safe zone, checked at 320 pt and with the
+  longest title).
+
 ## Motion
 - [ ] Sheets and panels don't bounce; press feedback is 0.97 or an opacity step; arrivals use one shared motion.
 - [ ] Every looping animation marks something live or primary.
 - [ ] Reduce Motion is honoured; only transform and opacity are animated.
 
 ## Copy
+- [ ] The home header fits the app: a greeting or question that names the one decision for a
+  personal daily app, a plain title for a utility.
 - [ ] Plain, specific, explains why; buttons are verb-first; no hype or exclamation marks.
 - [ ] Every empty state teaches and offers the next step; every error says what to do.
 - [ ] Placeholders are concrete and local; the per-app rules (contractions, spelling, dashes) hold.

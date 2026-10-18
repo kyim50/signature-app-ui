@@ -212,6 +212,11 @@ The base should be nearly invisible, so the signature has room.
 
 - **Plain and concrete, and it explains why:** "The organiser sees who is coming, so an RSVP needs a
   name."
+- **The home header: greeting, question or plain title, decided per app.** A personal, daily app
+  can open with a line in its own voice that names the decision ("What's for supper, Kimani?",
+  "Leeks tonight, Nia?", "Evening, Kimani"). A utility you open to check one thing keeps a plain title
+  ("Your stops", "This week"). Don't greet in every app; don't greet with nothing to say. When you
+  greet, make it about the one thing (tonight's dinner), not a generic "Good morning".
 - **Labels can be questions:** "Where did you stop?", "Is this still accurate?"
 - **Buttons are verb-first and name the act:** "Post a quest", "Call it off". Secondary actions can
   be lowercase ("not now", "skip"), drawn as outlined buttons when they share a row with the
@@ -231,6 +236,10 @@ The base should be nearly invisible, so the signature has room.
 
 - Art **melts** into whatever is behind it (a smoothstep over the bottom 30–40%, never a hard band).
 - Headers are transparent over a scene. Screen tops can be scenes, not toolbars.
+- **Art never touches text or controls.** When an illustration bleeds off a card's edge, it stays
+  inside its own corner: a safe zone around the title, the meta row and the buttons is kept clear
+  (at least 12 pt). Check the longest title and the narrowest (320-pt) width; shrink or move the art
+  before you shrink the text.
 - Busy art never goes behind data. Keep backdrops calm and put the art where the reading isn't.
 
 ## 9. Write it down
