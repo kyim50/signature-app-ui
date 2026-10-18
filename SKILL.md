@@ -31,7 +31,8 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
    app's own rules beat this skill's defaults.
 2. **Find the world.** What physical or cultural thing does this app's subject live in? Name one
    (local signage, a game cartridge, a field notebook, a transit ticket). Write it in one sentence.
-   Its materials become the signature layer. method.md § 1.
+   It supplies the signature layer, which can be a hero card with illustration, a type grammar, a
+   live display, an object, a data shape, a scene or motion. Not always paper. method.md § 1.
 3. **Let the world pick the base too:** light or dark, the ramp's temperature, the accent and the
    text face, each named with the object in the world it came from. method.md § 1, "The world also
    picks the base".
@@ -57,10 +58,14 @@ Not for illustration technique (glyph scenes, pixel mascots). That has its own s
 | --- | --- |
 | The generic "tasteful" default: a cream-paper *page*, serif display, red accent, soft shadows | Find the app's own world first (steps 2–3). Paper is fine as an *object* the world really has (a slip, a ticket), never as the page chrome |
 | Inter / Roboto / the platform default as the text face | A calm face taken from the world's printed matter (step 3), loaded as a custom font |
-| The *base* defaults while the world is specific: light cool grey, cobalt accent, Figtree/Inter, red banned, every app | Name the object in the world each of the base, accent and face came from (step 3). No object, no choice |
+| The *base* defaults while the world is specific: light cool grey, cobalt accent, Figtree/Inter, Libre Franklin + Courier Prime, red banned, every app | Name the object in the world each of the base, accent and face came from (step 3). No object, no choice |
 | Every panel a soft floating card with a shadow | Flat sections on the page; cards by a fill step only; shadows only on things that float (popups, toasts, paper objects) |
 | Faint 1-px outlines on chips, cards, buttons, segmented controls | A soft fill; a picked chip or filter gets an edge (accent for the primary choice, text colour for the rest) on an invisible border that's always there, so states never shift layout |
-| Bare text "not now" beside a filled primary button; a picked filter shown by a faint fill alone | Outline them in the text colour: the secondary is an outlined button of the same height; the picked chip gets a 1.5-pt edge |
+| Every world turned into a paper prop (slip, tag, index card, tape) | Pick the signature *form* that serves the screen: often a strong illustrated hero card beats a literal object |
+| "Not now" / "Cancel" buttons competing with the primary at the bottom of a sheet | ✕ close in the sheet header; the bottom holds one full-width primary with an icon |
+| Bare text beside a primary; a picked filter shown by a faint fill alone | Real alternatives are outlined buttons; the picked chip gets a 1.5-pt edge |
+| A sheet that opens straight into fields | A header naming the object: thumbnail, context line, title, ✕; a consequence line before the commit |
+| "optional" floating beside a label | "Label (optional)" in brackets, muted |
 | A bright neon accent (mint, cyan, lime) as the button fill on a dark page | Deep, muted fill (saturation < ~55%, lightness 25–45%) with light text; lighter desaturated tint only for small marks |
 | Accent on headings, icons, badges, tints everywhere | Accent = pointer. Count its uses; one primary button per view; focus ring in the text colour |
 | Tinted wash pills for status | Status in the signature layer's own object (a painted plate, a stamp, a bracketed tag) |

@@ -20,14 +20,17 @@ finding with a file:line and a fix.
   colour on the rest), and don't shift layout (transparent borders reserved).
 
 ## Accent and loud parts
-- [ ] The accent appears only as a pointer; one primary filled action in view; a secondary action
-  in the same row is an outlined button, not bare text.
+- [ ] The accent appears only as a pointer; one primary filled action in view; a real alternative
+  action is an outlined button, not bare text; dismissal is a ✕.
 - [ ] No neon: the accent fill is deep and muted (saturation < ~55%, lightness 25–45%) with light text.
 - [ ] The banned colour is absent.
 - [ ] The signature face and paints appear only on signature objects.
 - [ ] At most one big moment on the screen.
 
 ## Chrome
+- [ ] Sheets: the header names the object (thumbnail, context line, title, ✕); dismissal is the ✕,
+  not a bottom button; one full-width primary with a leading icon; a consequence line above it.
+- [ ] Optional fields read "Label (optional)".
 - [ ] No system alerts, emoji or default spinners. Popups, toasts, sheets and skeletons are the app's own.
 - [ ] Popup: the title is a question, the cancel says what you keep, the destructive button names the act.
 - [ ] The tab bar has one active signal.

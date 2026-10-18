@@ -19,6 +19,26 @@ Rules:
 - **Write it in one sentence** at the top of DESIGN.md (Cite: "every live fact is a painted counter
   sign"). Every later choice is checked against it.
 
+### The signature can take many forms (not always paper)
+
+The world is a source of *ideas*, not a demand to draw a literal object. Pick the form that serves
+the screen best; often it's a strong composition, not a prop.
+
+| Form | Example |
+| --- | --- |
+| **A hero card with an illustration** | tonight's dinner as a big dark card: a drawn plate bleeding off the corner, the dish in a serif, a meta row (35 min · serves 2 · all in pantry), the primary action inside it |
+| **A glyph or type grammar** | Tabi's `[BRACKETS]` and `▶` menu |
+| **A live display** | a bus's dot-matrix headsign |
+| **A painted or printed object** | Cite's enamel boards; a date-due slip |
+| **A data shape from the world** | the bar loaded with real plates; a soil-probe needle |
+| **Illustration or scene** | Tabi's night scenes melting into the page |
+| **Motion** | an ink dissolve between tabs; a live dot breathing in sync |
+
+**Don't make every world a paper artifact** (slip, tag, index card, tape, packet). Paper is one
+option among seven. If your last design used paper, try a different form first. The test is not
+"is it a real object?" but "would someone recognise this app from this screen, and does the layer
+mark something?" A polished hero card that a generic app wouldn't have passes.
+
 ### The world also picks the base (accent, text face, light or dark)
 
 The signature layer is not the only thing the world decides. Before choosing any token, walk the
@@ -33,7 +53,8 @@ world and write down three things, each with the object it came from:
 
 **Defaults are a smell, not a choice.** If you reach for the accent, face or base before naming the
 object it came from, it is the house default leaking in. Models converge on: a light cool grey base,
-a cobalt blue accent (`#24xxC9`), Figtree or Inter, and red as the banned colour. Any one can be
+a cobalt blue accent (`#24xxC9`), Figtree or Inter, Libre Franklin with Courier Prime for anything
+"typed", and red as the banned colour. Also: dark warm base every time, and a paper prop as the signature. Any one can be
 right *if the world gives it to you*; picking it because it is safe is the same mistake as the cream
 editorial default, one layer down.
 
@@ -68,6 +89,23 @@ The base should be nearly invisible, so the signature has room.
 - **Dark mode is designed, not inverted.** True black or warm dark, its own surface ramp. Imagery
   and maps are colour-graded to sit flush with it (Cite grades the night map with a LUT).
 
+### The UX floor (every screen)
+
+- **Lead with the one thing.** The top of a home screen answers "what should I do now?" with one
+  hero (tonight's dinner, the next bus, today's set) and its primary action inside it. Lists and
+  history come after.
+- **Every row shows its state on the right,** aligned in one column (7 min, 5 of 12, Sun, ✓), so
+  the eye can scan down it.
+- **Prefer taps to typing.** Small counts get a stepper, common answers get chips, free text is the
+  last field and optional. Sheets keep the primary above the keyboard.
+- **Tap targets at least 44 pt;** primary actions sit in the thumb zone (in the hero, or at the
+  bottom of a sheet).
+- **Numbers use tabular figures** wherever they stack or change (times, prices, weights), so they
+  don't jitter.
+- **Undo beats confirm.** For reversible acts (log, mark done, remove from list) act at once and
+  offer undo in the toast. Save the confirm popup for destructive, irreversible acts.
+- **Progress is visible:** "5 of 12 picked" with a thin bar, ticks on days that are done.
+
 ## 3. Ration the accent
 
 - **The accent is a pointer:** selected, next step, waiting on you. Not headings, not decoration,
@@ -75,10 +113,17 @@ The base should be nearly invisible, so the signature has room.
 - **One primary filled action per view.** Everything else is quieter:
   - Tabi: lowercase mono text actions with an accent `›`;
   - Cite: a neutral secondary button and a square `…` button.
-- **A secondary action beside the primary button is a real button, outlined:** same height and
-  radius, transparent fill, a 1.5-pt edge in the primary text colour ("not now", "skip set",
-  "cancel"). Bare text next to a filled button reads as a label, not a tap target. Bare text with a
-  `›` is fine for links that sit *elsewhere* (in a list, under a section), never in the button row.
+- **Dismissal is an X, not a button.** In a sheet or modal, "not now" / "cancel" is a 32-pt round
+  close button (✕) in the header, top right, on a fill step. The bottom of the sheet holds only the
+  primary action, full width, so nothing competes with it.
+- **A real alternative action is an outlined button:** when the second choice *does* something
+  ("Swap dinner", "Skip set", "Cooked it"), it sits beside or inside the same card as the primary,
+  same height and radius, transparent fill, a 1.5-pt edge in the primary text colour (or a fill step
+  on a dark card). Bare text next to a filled button reads as a label, not a tap target. Bare text
+  with a `›` is fine for links that sit *elsewhere* (in a list, under a section).
+- **The primary button carries an icon** (16–20 pt, leading, same colour as its label) that shows
+  the act: ▶ start, ✓ done, ✎ write, + add. The label names the act and, when useful, its result
+  ("Log dinner · 6th this week").
 - **Split the accent by job** when contrast demands it: Cite uses bright green for text and icons
   and deep enamel green for fills, with white text on the fill. Text on an accent fill is whatever
   passes contrast (Tabi uses dark ink on terracotta).
@@ -116,9 +161,9 @@ The base should be nearly invisible, so the signature has room.
   mono for every label, number, button and kicker. Uppercase kickers are a per-app choice: Tabi
   uses tracked mono kickers above every group, while Cite bans uppercase kickers above headings.
   Decide once and write it down.
-- **Paper or physical objects for content,** flat chrome for controls (Tabi: quests as pinned
-  notes and printed photos on a dark board). Shadows exist only on those objects and on floating
-  layers.
+- **Objects or hero cards for content, flat chrome for controls** (Tabi: quests as pinned notes
+  on a dark board; a meal app: tonight's dinner as a dark illustrated card). Shadows exist only on
+  those and on floating layers.
 
 ## 5. Replace system chrome
 
@@ -130,6 +175,13 @@ The base should be nearly invisible, so the signature has room.
 - **Your own toast:** a short title plus an optional consequence line, with a signature mark (`[ ✓ ]`).
 - **Your own bottom sheet:** one shared component that owns the backdrop, motion and handle. Sheet
   heights are measured from content, not guessed.
+- **The sheet header names the thing you're acting on:** a 44–48-pt thumbnail of the object (the
+  dish illustration, the book cover, the bus's route plate), a small context line ("Log tonight's
+  dinner"), the object's name as the title, and the ✕ on the right. You always know what the sheet
+  is about without reading the body.
+- **Show the consequence before the commit:** a quiet line or tinted note above the primary
+  button says what will happen ("We'll take 2 salmon fillets and 1 bunch of chard out of your
+  pantry", "Food goes from £22.15 to £17.95").
 - **Shaped skeletons** that look like the results arriving: varied widths, fading down the list,
   shown only after a ~120 ms delay so fast loads never flash.
 - **Icons:** one library in one style (outline) at fixed sizes (12/16/20/24), or hand-made pixel
@@ -167,6 +219,9 @@ The base should be nearly invisible, so the signature has room.
 - **Empty states:** a scene or icon, a title, one sentence that teaches how it fills, and the next
   step ("find a quest on the map ›"). Never a lone grey line.
 - **Errors:** "Couldn't load {what}" plus what to do ("Check your connection and try again.").
+- **Optional fields say so in brackets after the label:** "Anything you changed? (optional)", in
+  the muted tier. Never a separate word floating to the side, and never an asterisk on the required
+  ones instead.
 - **Placeholders:** local and specific ("e.g. Free patties at the Student Union").
 - **No hype.** Exclamation marks almost never; the app's nouns carry the playfulness.
 - **Pick per app and write down:** contractions (Tabi yes, Cite no), British or American spelling,
